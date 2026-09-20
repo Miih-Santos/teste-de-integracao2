@@ -1,0 +1,159 @@
+{
+  "info": {
+    "_postman_id": "ffca3aaf-e25c-44d2-91c3-ec07d25a585e",
+    "name": "estudos_CRUD",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43598046"
+  },
+  "item": [
+    {
+      "name": "cadastro",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"doador\": {\n    \"nome\": \"Beatriz Lima\",\n    \"email\": \"beatriz.lima@email.com\",\n    \"senha\": \"senhaSegura456\",\n    \"dataCadastro\": \"2026-09-20 18:00:00\",\n    \"ativo\": true\n  },\n  \"endereco\": {\n    \"rua\": \"Rua das Palmeiras, 456\",\n    \"bairro\": \"Jardins\",\n    \"cidade\": \"São Paulo\",\n    \"estado\": \"SP\"\n  },\n  \"telefone\": {\n    \"ddd\": \"11\",\n    \"numero\": \"998877665\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/cadastro",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cadastro"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "doadores",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/doador",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "doador"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "telefones",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/telefone",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "telefone"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "enderecos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/endereco",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "endereco"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "doador",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/doador/7",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "doador",
+            "7"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "endereco",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/endereco/7",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "endereco",
+            "7"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "telefone",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/telefone/6",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "telefone",
+            "6"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

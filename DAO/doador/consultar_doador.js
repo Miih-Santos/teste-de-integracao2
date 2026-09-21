@@ -21,4 +21,13 @@ async function consultarDoadorId(id){
     }
 };
 
-export {consultarDoadores, consultarDoadorId};
+async function consultarDoadorEmail(email) {
+    try {
+        const query = 'SELECT * FROM cliente_doador_tbl WHERE email = ?'
+        const [registro] = await pool.query(query, [email]);
+        return registro[0];
+    } catch (error) {
+        throw new Error(`Erro ao buscar doador: ${error.message}`);
+    } 
+}
+export {consultarDoadores, consultarDoadorId, consultarDoadorEmail};

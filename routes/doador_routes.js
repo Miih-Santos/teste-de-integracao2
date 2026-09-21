@@ -1,8 +1,9 @@
 import express from "express";
 import { consultarDoadores, consultarDoadorId } from "../DAO/doador/consultar_doador.js";
+import { verificarAutenticacao } from '../src/middleware/autenticacao.js';
 let rota = express.Router();
 
-rota.get("/", async (req, res) => {
+rota.get("/", verificarAutenticacao, async (req, res) => {
     try {
         let resp = await consultarDoadores();
         res.status(200).json({ Doadores: resp })
@@ -13,7 +14,7 @@ rota.get("/", async (req, res) => {
     } 
 });
 
-rota.get("/:id", async (req, res) => {
+rota.get("/:id", verificarAutenticacao, async (req, res) => {
     try {
         let {id} = req.params;
         let resp = await consultarDoadorId(id);

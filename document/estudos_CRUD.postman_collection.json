@@ -13,7 +13,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"doador\": {\n    \"nome\": \"Beatriz Lima\",\n    \"email\": \"beatriz.lima@email.com\",\n    \"senha\": \"senhaSegura456\",\n    \"dataCadastro\": \"2026-09-20 18:00:00\",\n    \"ativo\": true\n  },\n  \"endereco\": {\n    \"rua\": \"Rua das Palmeiras, 456\",\n    \"bairro\": \"Jardins\",\n    \"cidade\": \"São Paulo\",\n    \"estado\": \"SP\"\n  },\n  \"telefone\": {\n    \"ddd\": \"11\",\n    \"numero\": \"998877665\"\n  }\n}",
+          "raw": "{\n  \"doador\": {\n    \"nome\": \"Carlos Silva\",\n    \"email\": \"carlos.silva@email.com\",\n    \"senha\": \"SenhaForte123!\",\n    \"dataCadastro\": \"2026-09-20 22:30:00\",\n    \"ativo\": true\n  },\n  \"endereco\": {\n    \"rua\": \"Rua Teste, 123\",\n    \"bairro\": \"Centro\",\n    \"cidade\": \"São Paulo\",\n    \"estado\": \"SP\"\n  },\n  \"telefone\": {\n    \"ddd\": \"11\",\n    \"numero\": \"911223344\"\n  }\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -150,6 +150,87 @@
           "path": [
             "telefone",
             "6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"beatriz.lima@email.com\",\n  \"senha\": \"senhaSegura456\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/login",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "cadastro_erro2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"doador\": {\n    \"nome\": \"Carlos Merda\",\n    \"email\": \"carlos.silva@email.com\",\n    \"senha\": \"SenhaForte123!\",\n    \"dataCadastro\": \"2026-09-20 22:30:00\",\n    \"ativo\": true\n  },\n  \"endereco\": {\n    \"rua\": \"Rua Teste, 123\",\n    \"bairro\": \"Centro\",\n    \"cidade\": \"São Paulo\",\n    \"estado\": \"SP\"\n  },\n  \"telefone\": {\n    \"ddd\": \"11\",\n    \"numero\": \"911223344\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/cadastro",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cadastro"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "cadastro_erro1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"doador\": {\n    \"nome\": \"Carlos Silva\",\n    \"email\": \"carlos.silva.com\", \n    \"senha\": \"senha\", \n    \"dataCadastro\": \"2026-09-20 22:30:00\",\n    \"ativo\": true\n  },\n  \"endereco\": {\n    \"rua\": \"Rua Teste, 123\",\n    \"bairro\": \"Centro\",\n    \"cidade\": \"São Paulo\",\n    \"estado\": \"SP\"\n  },\n  \"telefone\": {\n    \"ddd\": \"11\",\n    \"numero\": \"911223344\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/cadastro",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "cadastro"
           ]
         }
       },

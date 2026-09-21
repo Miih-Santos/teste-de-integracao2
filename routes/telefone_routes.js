@@ -1,9 +1,9 @@
 import express from "express";
 let rota = express.Router();
-
 import {consultarTelefones,consultarTelefoneId} from "../DAO/telefone_doador/consultar_telefone.js";
+import { verificarAutenticacao } from '../src/middleware/autenticacao.js';
 
-rota.get("/", async (req,res)=>{
+rota.get("/", verificarAutenticacao, async (req,res)=>{
     try{
         let resp = await consultarTelefones();
         res.status(200).json({registros:resp})
@@ -12,7 +12,7 @@ rota.get("/", async (req,res)=>{
     }
 });
 
-rota.get("/:id", async (req,res)=>{
+rota.get("/:id", verificarAutenticacao, async (req,res)=>{
     const {id} = req.params;
     try{
         let resp = await consultarTelefoneId(id);
